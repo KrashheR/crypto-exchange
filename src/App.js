@@ -37,7 +37,7 @@ function App() {
   const handleRefreshData = () => {
     if (period) {
       const baseUrl = 'https://min-api.cryptocompare.com/data/exchange/histohour';
-      const query = `?tsym=${selectedCoin}&limit=30&aggregate=${period}`;
+      const query = `?tsym=${selectedCoin}&limit=24&aggregate=${period}`;
 
       axios
         .get(baseUrl + query)
