@@ -7,10 +7,11 @@ function PeriodButtons({ handlePeriodChange, selectedPeriod }) {
     <StyledList>
       {periodOptions.map((option) => (
         <li key={option.value}>
-          <StyledLabel active={selectedPeriod === option.value}>
+          <StyledLabel $active={selectedPeriod === option.value}>
             <HiddenRadio
               value={option.value}
               name="period"
+              type="radio"
               onChange={() => handlePeriodChange(option.value)}
             />
             {option.label}
